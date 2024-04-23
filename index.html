@@ -83,16 +83,18 @@
 //for X transition
 const pressX =  document.getElementById('removeStuff');
 pressX.addEventListener('click',function(){
-   const pressXelement = document.getElementById('transaction-area');
-   pressXelement.style.display = 'none';
+updateXbtn('transaction-area')
 
 });
 const pressX2 =  document.getElementById('removeStuff2');
 pressX2.addEventListener('click',function(){
-   const pressXelement2 = document.getElementById('transaction-area2');
-   pressXelement2.style.display = 'none';
+updateXbtn('transaction-area2');
 
 });
+function updateXbtn(id) {
+   const pressXelement = document.getElementById(id);
+   pressXelement.style.display = 'none';
+}
 
 
    // FOR (+)
@@ -162,15 +164,8 @@ function decreaseAmount(id, n) {
    document.getElementById(id).innerText = minusNumberCount;
 };
 
-// function countAll() {
-//     const total = minusNumberCount + plusNumberCount + finalMinusNumber + finalNumber;
-//     return total;
-// }
 
-// function updateTotalCost() {
-//     const totalCost = countAll();
-//     resultElement.innerText = totalCost;
-// }
+
 </script>   
 </body>
 </html>
